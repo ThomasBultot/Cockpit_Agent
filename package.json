@@ -1,0 +1,15 @@
+{
+  "name": "cockpit-agent",
+  "version": "1.0.0",
+  "description": "this is the service in charge of loading log info from the differentes api",
+  "main": "agent.js",
+  "scripts": {
+    "test": "node agent.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^7.12.1",
+    "request": "^2.88.0"
+  }
+}
