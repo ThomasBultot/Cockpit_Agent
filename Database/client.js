@@ -1,5 +1,5 @@
 const config = require('../Config/config.js');
-
+var hello = 'coucou';
 const { Pool } = require('pg');
 const pool = new Pool({
     user: config.db_user,
