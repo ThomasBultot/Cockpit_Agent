@@ -76,12 +76,14 @@ function getErrors(logFile) {
                     errorRow["cliID"] = configInfo.cliID;
                     errorRow["logID"] = logFile["logID"];
                     errorRow["messageType"] = translateMessageType(result.messageType);
-                    errorRow["messageType"] = translateMessageType(result.messageType);
                     errorRow["createDate"] = new Date().toISOString();
                     errorRow["updateDate"] = new Date().toISOString();
                     errorTable.push(errorRow);
-                    console.log(result);
                 });
+                
+                if(errorTable.length > 0){
+                    dbError.InsertError(fileResult.talend.fileName, constantes.apiType.Partena);
+                }
             })
     } catch (ex) {
         throw ("Error in partena.js - getErrors : \n" + ex.message);
