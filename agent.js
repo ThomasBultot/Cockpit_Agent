@@ -1,6 +1,5 @@
 const agentConfig = require('./Database/agentConfig.js');
 const error = require('./Utility/error.js');
-var hello = 'coucou';
 global.client = require('./Database/client.js');
 global.constantes = require('./Utility/constante.js');
 global.configInfo = new Object();
